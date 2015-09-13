@@ -92,22 +92,21 @@ function playToFive() {
     var playerMove = getPlayerMove(getInput());
     var computerMove = getComputerMove(randomPlay());
     var roundWinner = getWinner(playerMove, computerMove); 
-        if (roundWinner == "player"){
+        if (roundWinner === "player"){
             playerWins ++;
             console.log ("Player Wins!");
         }
-        else if (roundWinner == "computer"){
+        else if (roundWinner === "computer"){
             computerWins ++;
             console.log ("Computer Wins");
         }
-        else if (roundWinner == "tie"){
+        else if (roundWinner === "tie"){
             console.log ("its a tie no winner");
         }
        
     /* message after each round who played what and score*/
     console.log("Player chose " + playerMove + " while Computer chose " + computerMove);
-    console.log('The score is currently Player: ' + playerWins + ' to Computer: ' + computerWins)  "</br>"
-    }
+    console.log('The score is currently Player: ' + playerWins + ' to Computer: ' + computerWins)}
      return [playerWins, computerWins];
 }
 console.log ("Game over" );
